@@ -1,10 +1,18 @@
 function flavorSorter(userInputString) {
   const strings = userInputString.split(",");
   const flavors = [];
+  const flavorsObject = {};
   for (let f of strings) {
+    const flavor = f;
+    if (flavor in flavorsObject) {
+      flavorsObject[flavor] += 1;
+    } else {
+      flavorsObject[flavor] = 1;
+    }
     flavors.push(f);
   }
-  return flavors;
+  console.log(flavors);
+  return flavorsObject;
 }
 
 const flavorsUserInput = prompt(
