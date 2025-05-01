@@ -20,4 +20,6 @@ const flavorsUserInput = prompt(
   "vanilla,vanilla,vanilla,strawberry,coffee,coffee"
 );
 
+//Hi
+
 console.log(flavorSorter(flavorsUserInput));
